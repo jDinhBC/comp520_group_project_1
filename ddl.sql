@@ -34,7 +34,7 @@ home_score int,
 visit_score int,
 game_date VARCHAR(255),
 game_stadium VARCHAR(255),
-against_team VARCHAR(255),
+against_team int,
 PRIMARY KEY (GAME_ID),
 FOREIGN KEY (season) REFERENCES seasons(SEASON_ID),
 FOREIGN KEY (against) REFERENCES teams(TEAM_ID)
