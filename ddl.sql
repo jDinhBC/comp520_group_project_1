@@ -37,6 +37,6 @@ game_stadium VARCHAR(255),
 against_team int,
 PRIMARY KEY (GAME_ID),
 FOREIGN KEY (season) REFERENCES seasons(SEASON_ID),
-FOREIGN KEY (against) REFERENCES teams(TEAM_ID)
+FOREIGN KEY (against_team) REFERENCES teams(TEAM_ID)
 );
 
