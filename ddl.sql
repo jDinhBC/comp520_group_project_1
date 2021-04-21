@@ -28,6 +28,7 @@ PRIMARY KEY (TEAM_ID)
 CREATE TABLE games (
 GAME_ID int NOT NULL AUTO_INCREMENT,
 season int,
+pats VARCHAR(255),
 pat_score int,
 against_team int,
 against_score int,
