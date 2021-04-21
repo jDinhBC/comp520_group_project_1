@@ -26,7 +26,7 @@ VALUES
 ('Los Angeles Chargers', 'Inglewood', 'SoFi Stadium', 'Chargers', 'Dean Spanos'),
 ('Los Angeles Rams', 'Inglewood', 'SoFi Stadium', 'Rams', 'Stan Kroenke'); /*superbowl*/
 
-INSERT INTO games (season, pat_score, against_team, against_score, game_date, game_stadium)
+INSERT INTO games (season, pats, pat_score, against_team, against_score, game_date, game_stadium)
 VALUES
 (1, 'New England Patriots', 27, 2, 20, '09/09/2018', 'Gillette Stadium'),
 (1, 'New England Patriots', 20, 3, 31, '09/16/2018', 'TIAA Bankfield Stadium'),
