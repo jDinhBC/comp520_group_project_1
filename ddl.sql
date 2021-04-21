@@ -8,25 +8,29 @@ CREATE DATABASE brokerage;
 USE brokerage;
 
 CREATE TABLE season (
-ID int autoincrement primary key,
-week int
-
-
-)
+ID int autoincrement,
+year VARCHAR(255),
+week int,
+PRIMARY KEY (ID)
+);
 
 
 CREATE TABLE team(
-ID int autoincrement primary key,
-team int,
+TEAM_ID int autoincrement primary key,
+team_name VARCHAR(255),
+team_city VARCHAR(255),
+home_stadium VARCHAR(255)
 
-)
+);
 
 CREATE TABLE game(
-ID int autoincrement primary key,
-home FOREIGN KEY,
-visit FOREIGN KEY,
+GAME_ID int NOT NULL autoincrement,
+home VARCHAR(255),
+visit VARCHAR(255),
 home_score int,
 visit_score int,
 winner VARCHAR,
-)
+PRIMARY KEY (ID),
+FOREIGN KEY (ID) REFERENCES season(week)
+);
 
