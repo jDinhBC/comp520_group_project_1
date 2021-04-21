@@ -1,3 +1,8 @@
+/*
+* DDL - Data Definition Language
+* DDL is the SQL commands for creating and modifying database objects such as tables, indices, and users.
+*/
+
 DROP DATABASE IF EXISTS comp520project1;
 CREATE DATABASE brokerage;
 USE brokerage;
