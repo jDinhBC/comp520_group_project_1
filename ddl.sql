@@ -16,7 +16,7 @@ PRIMARY KEY (ID)
 
 CREATE TABLE teams (
 TEAM_ID int NOT NULL autoincrement,
-team_name VARCHAR(255),
+team_name UNIQUE VARCHAR(255),
 team_city VARCHAR(255),
 home_stadium VARCHAR(255),
 team_nickname VARCHAR(255),
@@ -27,8 +27,8 @@ PRIMARY KEY (TEAM_ID)
 CREATE TABLE games (
 GAME_ID int NOT NULL autoincrement,
 season int,
-home_team VARCHAR(255),
-visiting_team VARCHAR(255),
+home_team int,
+visiting_team int,
 home_score int,
 visit_score int,
 game_date VARCHAR(255),
