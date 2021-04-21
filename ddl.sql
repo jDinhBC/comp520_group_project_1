@@ -8,7 +8,7 @@ CREATE DATABASE brokerage;
 USE brokerage;
 
 CREATE TABLE seasons (
-SEASON_ID int autoincrement,
+SEASON_ID int NOT NULL autoincrement,
 year int,
 PRIMARY KEY (ID)
 );
