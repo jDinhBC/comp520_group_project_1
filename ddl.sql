@@ -28,16 +28,15 @@ PRIMARY KEY (TEAM_ID)
 CREATE TABLE games (
 GAME_ID int NOT NULL AUTO_INCREMENT,
 season int,
-home_team int,
-visiting_team int,
+home_team VARCHAR(255),
+visiting_team VARCHAR(255),
 home_score int,
 visit_score int,
 game_date VARCHAR(255),
 game_stadium VARCHAR(255),
-against VARCHAR(255),
+against_team VARCHAR(255),
 PRIMARY KEY (GAME_ID),
 FOREIGN KEY (season) REFERENCES seasons(SEASON_ID),
-FOREIGN KEY (home_team) REFERENCES teams(TEAM_ID),
-FOREIGN KEY (visiting_team) REFERENCES teams(TEAM_ID)
+FOREIGN KEY (against) REFERENCES teams(TEAM_ID)
 );
 
