@@ -47,3 +47,34 @@ VALUES
 (1, 'New England Patriots', 41, 15, 28, '01/13/2019', 'Gillette Stadium'),
 (1, 'New England Patriots', 37, 7, 31, '01/20/2019', 'Arrowhead Stadium'),
 (1, 'New England Patriots', 13, 16, 3, '02/03/2019', 'Mercedes-Benz Stadium'); /*superbowl*/
+
+
+/*1st*/
+SELECT pats, pat_score, team_name, against_score 
+FROM games 
+FULL JOIN teams 
+ON against_team = TEAM_ID;
+
+/*2nd*/
+
+SELECT team_name, team_nickname, team_city, game_stadium, team_owner 
+FROM games 
+FULL JOIN teams 
+ON against_team = TEAM_ID 
+WHERE against_score > pat_score;
+
+/*3rd*/
+
+SELECT pat_score, against_score, game_date, team_name 
+FROM games 
+FULL JOIN teams 
+ON against_team = TEAM_ID 
+WHERE pat_score > against_score;
+
+/*4th*/
+
+SELECT GAME_ID, game_date, pat_score, against_score, team_name 
+FROM games 
+FULL JOIN teams 
+ON against_team = TEAM_ID 
+WHERE (pat_score+7) <= against_score;
